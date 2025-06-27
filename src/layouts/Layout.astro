@@ -8,21 +8,36 @@
     <title>Daniel's Website</title>
   </head>
   <body>
-    <slot />
+    <div class="main-container">
+      <header>
+        <h1>Daniel Zapata's website</h1>
+      </header>
+      <slot />
+      <footer>This is a footer, neat huh? :)</footer>
+    </div>
   </body>
 </html>
 
 <style>
   body {
-    margin: 40px auto;
+    margin: 0px auto;
     max-width: 650px;
-    line-height: 1.6;
     font-size: 18px;
     color: #444;
-    padding: 0 10px;
   }
 
   h1, h2, h3 {
+    margin: 0px;
     line-height: 1.2;
+  }
+
+  .main-container {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    margin-top: auto;
   }
 </style>
